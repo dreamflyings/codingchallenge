@@ -56,9 +56,9 @@ TEST(ch11_6, basic) {
     m[2][0] = 30; m[2][1] = 300; m[2][2] = 3000;
     EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 2000), 1);
     EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 3000), 1);
-    EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 10),   );
+    EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 10),   1);
     EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 11),   0);
-    EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 300), 1);
+    EXPECT_EQ(find_elem(m, 0, 0, 3, 3, 300),  1);
 }
 
 }

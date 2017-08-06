@@ -21,19 +21,19 @@ using namespace std;
 namespace ch1_3 {
 
 int is_permutation(const string &a, const string &b) {
-    if (a.size() != b.size())
-        return 0;
+  if (a.size() != b.size())
+    return 0;
 
-    string a_tmp = a;
-    string b_tmp = b;
-    std::sort(a_tmp.begin(), a_tmp.end());
-    std::sort(b_tmp.begin(), b_tmp.end());
-    return (a_tmp == b_tmp) ? 1 : 0;
+  string a_tmp = a;
+  string b_tmp = b;
+  std::sort(a_tmp.begin(), a_tmp.end());
+  std::sort(b_tmp.begin(), b_tmp.end());
+  return (a_tmp == b_tmp) ? 1 : 0;
 }
 
 TEST(ch1_3, basic) {
-    ASSERT_EQ(is_permutation("abc", "cba"), 1);
-    ASSERT_EQ(is_permutation("abc", "baa"), 0);
+  ASSERT_EQ(is_permutation("abc", "cba"), 1);
+  ASSERT_EQ(is_permutation("abc", "baa"), 0);
 }
 
 } // namespace ch1_3

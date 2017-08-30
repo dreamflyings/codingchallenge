@@ -9,4 +9,3 @@ file(GLOB SRCS *.cpp *.h)
 add_executable(ctci ${SRCS})
 
 target_link_libraries(ctci gtest gtest_main)
-

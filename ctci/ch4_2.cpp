@@ -12,14 +12,19 @@ namespace ch4_2 {
 
 typedef array<vector<int>, 4> adj_list_t; // adjacency list
 
-int dfs(const adj_list_t &a, array<int, 4> &v, int i, int z) {
-  for (unsigned i=0; i<a[i].size(); i++) {
-    if (v[i] == 1)
-      return 1; // have visited this node
-    else
-      return 0;
+int dfs(const adj_list_t &a, array<int, 4> &v, int n, int f) {
+  if (n == f)
+    return 1;
+
+  v[n] = 1; // mark done as visited
+
+  for (unsigned i=0; i<a[n].size(); i++) {
+    int nn = a[n][i];
+    if (v[nn] == 0) // next node is not visited
+      return dfs(a, v, nn, f);
   }
-  return 1;
+
+  return 0;
 }
 
 TEST(ch4_2, basic) {

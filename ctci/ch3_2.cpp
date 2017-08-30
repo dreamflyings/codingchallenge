@@ -1,6 +1,7 @@
 // ch3.2: Design a vals that has push, pop, and min (returns min element)
 //        functions that all operate in O(1) time.
 
+#include <stdexcept>
 #include <gtest/gtest.h>
 
 using namespace std;

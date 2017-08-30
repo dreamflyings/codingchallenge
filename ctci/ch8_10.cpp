@@ -57,7 +57,7 @@ template <typename K, typename V>
 void HashTable<K, V>::put(K k, V v) {
   int hash_key = std::hash<K>()(k);
   list<HashCell<K, V>*> *l = &cell_lists[hash_key];
-  typename list<HashCell<K, V>*>::const_iterator it;
+  typename list<HashCell<K, V>*>::iterator it;
 
   HashCell<K, V> *cell = new HashCell<K, V>(k, v); //--FIXME: use smart pointer?
 

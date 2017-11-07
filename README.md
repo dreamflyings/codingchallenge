@@ -1,12 +1,10 @@
-### Solutions to various coding challenges
+# Solutions to various coding challenges
 
-This repository typically gets updated during interview prep.
+This repository typically gets updated during interview prep.  Most solutions are written using C++.
 
-# Steps to install gtest
+### Steps to build and run exercises
 
-See: https://stackoverflow.com/questions/13513905/how-to-setup-googletest-as-a-shared-library-on-linux
-
-# Steps to build and run exercises
+Make sure that gtest is installed.  See (here)[https://stackoverflow.com/questions/13513905/how-to-setup-googletest-as-a-shared-library-on-linux].  Follow these steps to build and run.
 
     cd build
     cmake ..

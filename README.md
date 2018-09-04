@@ -9,7 +9,9 @@ to interview practice questions.
 
 2. Build and run solutions
 
-    cd ctci/build
-    cmake ..
-    make test
+~~~~bash
+cd ctci/build
+cmake ..
+make test
+~~~~
 

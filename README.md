@@ -1,12 +1,15 @@
-# Solutions to various coding challenges
+# Coding Challenge Solutions
 
-This repository typically gets updated during interview prep.  Most solutions are written using C++.
+This repository contains my solutions to various coding challenges or solutions
+to interview practice questions.
 
-### Steps to build and run exercises
+### Instructions
 
-Make sure that gtest is installed.  See (here)[https://stackoverflow.com/questions/13513905/how-to-setup-googletest-as-a-shared-library-on-linux].  Follow these steps to build and run.
+1. Make sure that gtest is installed: `sudo apt test libgtest-dev`
 
-    cd build
+2. Build and run solutions
+
+    cd ctci/build
     cmake ..
-    make
-    ./ctci
+    make test
+

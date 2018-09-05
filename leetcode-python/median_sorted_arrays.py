@@ -34,7 +34,7 @@ My algorithm's complexity is O(n), not O(log(m+n).
 import unittest
 
 
-class MedianSortedArray(unittest.TestCase):
+class MedianSortedArrayTest(unittest.TestCase):
     def findMedianSortedArrays(self, nums1, nums2):
         """
         :type nums1: List[int]

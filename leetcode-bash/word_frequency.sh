@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 #
 # ### Problem ###
@@ -17,8 +17,7 @@
 #
 # Asume that words.txt has the following content:
 #
-# the day is sunny the the
-# the sunny is is
+# the day is sunny the the the sunny is is
 #
 # Your script should output the following, sorted by descending frequency:
 #
@@ -26,4 +25,12 @@
 # is 3
 # sunny 2
 # day 1
+
+for f in *.in ; do
+rm -f $f.act
+echo "cat $f | tr ' ' '\n' | grep -v '^$' | sort -n |  uniq -c | sort -rn | awk '{print \$2 \" \" \$1}' > $f.act"
+cat $f | tr ' ' '\n' | grep -v '^$' | sort -n |  uniq -c | sort -rn | awk '{print $2 " " $1}' > $f.act
+diff $f.act $f.exp
+done
+
 

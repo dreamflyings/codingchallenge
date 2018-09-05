@@ -26,7 +26,7 @@
 # sunny 2
 # day 1
 
-for f in *.in ; do
+for f in word_frequency*.in ; do
 rm -f $f.act
 echo "cat $f | tr ' ' '\n' | grep -v '^$' | sort -n |  uniq -c | sort -rn | awk '{print \$2 \" \" \$1}' > $f.act"
 cat $f | tr ' ' '\n' | grep -v '^$' | sort -n |  uniq -c | sort -rn | awk '{print $2 " " $1}' > $f.act

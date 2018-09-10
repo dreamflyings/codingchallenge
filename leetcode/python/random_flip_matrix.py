@@ -72,10 +72,8 @@ class RandomFlipMatrix():
 
         choices = self.n_rows * self.n_cols
 
-        index_to_flip = 0
-
         while True:
-            i = random.randint(0, choices-1)
+            i = random.randint(0, choices - 1)
             if i in self.matrix:
                 continue
             else:
@@ -92,7 +90,6 @@ class RandomFlipMatrix():
         """
         :rtype: void
         """
-
         self.matrix = set()
 
 

@@ -55,7 +55,7 @@ class CombinationSumTest(unittest.TestCase):
     def combinationSum(self, candidates, target):
         result = []
         candidates = sorted(candidates)
-        for r in range(len(candidates) + 7): # HACK
+        for r in range(len(candidates) + 7):  # HACK
             for c in filter(lambda x: sum(x) == target, itertools.combinations_with_replacement(candidates, r)):
                 result.append(list(c))
 

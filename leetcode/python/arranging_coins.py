@@ -27,25 +27,27 @@ start i end cont?
 """
 
 
+class ArrangingCoinsTest(object):
+    def arrangeCoins(self, n):
 
-class Solution(object):
-  def arrangeCoins(self, n):
+        if n == 0:
+            return 0
 
-    if n == 0:
-      return 0
+        if n == 1:
+            return 1
 
-    if n == 1:
-      return 1
+        i = 1
+        start = n
 
-    i = 1
-    start = n
+        while True:
+            end = start - i
+            if (end - i - 1) < 0: break
 
-    while True:
-        end = start - i
-        if (end-i-1) < 0: break
+            start = end
+            i += 1
 
-        start = end
-        i += 1
+        return i
+
 
 """
 i = 0
@@ -55,5 +57,3 @@ while remain > i:
 
 return i-1
 """
-    return i
-

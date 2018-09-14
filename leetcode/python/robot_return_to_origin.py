@@ -19,26 +19,23 @@ Straightforward?
 import unittest
 
 
-class Solution(unittest.TestCase):
-  def judgeCircle(self, moves):
-    x = 0
-    y = 0
+class RobotReturnToOriginTest(unittest.TestCase):
+    def judgeCircle(self, moves):
+        x = 0
+        y = 0
 
-    for move in list(moves):
-      if move == "U":
-        y += 1
-      elif move == "D":
-        y -= 1
-      elif move == "L":
-        x -= 1
-      elif move == "R":
-        x += 1
+        for move in list(moves):
+            if move == "U":
+                y += 1
+            elif move == "D":
+                y -= 1
+            elif move == "L":
+                x -= 1
+            elif move == "R":
+                x += 1
 
-    return True if (x == 0 and y == 0) else False
+        return True if (x == 0 and y == 0) else False
 
-  def test_smoke(self):
-    self.assertEqual(True, self.judgeCircle("UD"))
-    self.assertEqual(False, self.judgeCircle("LL"))
-
-unittest.main(exit=False)
-
+    def test_smoke(self):
+        self.assertEqual(True, self.judgeCircle("UD"))
+        self.assertEqual(False, self.judgeCircle("LL"))

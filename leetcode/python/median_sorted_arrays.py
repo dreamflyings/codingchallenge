@@ -73,7 +73,7 @@ class MedianSortedArrayTest(unittest.TestCase):
 
         if num_points % 2 == 0:
             index_even = int(num_points / 2)
-            return (result[index_even-1] + result[index_even]) / 2.0
+            return (result[index_even - 1] + result[index_even]) / 2.0
         else:
             index_odd = int((num_points - 1) / 2)
             return float(result[index_odd])

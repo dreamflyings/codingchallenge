@@ -55,4 +55,3 @@ class TwoSumTest(unittest.TestCase):
     def test_basic(self):
         self.assertEqual(self.twoSum([2, 7, 11, 15], 9), [0, 1])
         self.assertEqual(self.twoSum([3, 2, 4], 6), [1, 2])
-

@@ -46,39 +46,36 @@ Now, work through algorithm ...
 import unittest
 
 
-class Solution(unittest.TestCase):
-  def totalHammingDistance(self, nums):
-    """
-    :type nums: List[int]
-    :rtype: int
-    """
-    # O(n!)
-    #return sum(map(lambda x: self.hammingDistance(x[0], x[1]), itertools.combinations(nums, 2)))
+class TotalHammingDistanceTest(unittest.TestCase):
+    def totalHammingDistance(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        # O(n!)
+        # return sum(map(lambda x: self.hammingDistance(x[0], x[1]), itertools.combinations(nums, 2)))
 
-    nums_count = len(nums)
+        nums_count = len(nums)
 
-    distance = 0
+        distance = 0
 
-    for bit in range(4): # FIXME
-      num_0s = 0
-      num_1s = 0
+        for bit in range(4):  # FIXME
+            num_0s = 0
+            num_1s = 0
 
-      count_me = []
+            count_me = []
 
-      for num in nums:
-        x = 1 if num & (1 << bit) else 0
-        count_me.append(x)
+            for num in nums:
+                x = 1 if num & (1 << bit) else 0
+                count_me.append(x)
 
-      num_1s = sum(filter(lambda x: x == 1, count_me))
-      num_0s = nums_count - num_1s
+            num_1s = sum(filter(lambda x: x == 1, count_me))
+            num_0s = nums_count - num_1s
 
-      distance += num_0s * num_1s
+            distance += num_0s * num_1s
 
-    return distance
+        return distance
 
-  def test_smoke(self):
-    self.assertEqual(6, self.totalHammingDistance([4, 14, 2]))
-    self.assertEqual(7, self.totalHammingDistance([1337, 7331]))
-
-unittest.main(exit=False)
-
+    def test_smoke(self):
+        self.assertEqual(6, self.totalHammingDistance([4, 14, 2]))
+        self.assertEqual(7, self.totalHammingDistance([1337, 7331]))

@@ -18,14 +18,11 @@ Just use a set()
 import unittest
 
 
-class Solution(unittest.TestCase):
-  def numJewelsInStones(self, J, S):
-    jewels = set(list(J))
-    return sum([ 1  for stone in list(S) if stone in jewels ])
+class JewelsAndStonesTest(unittest.TestCase):
+    def numJewelsInStones(self, J, S):
+        jewels = set(list(J))
+        return sum([1 for stone in list(S) if stone in jewels])
 
-  def test_smoke(self):
-    self.assertEqual(3, self.numJewelsInStones("aA", "aAAbbbb"))
-    self.assertEqual(0, self.numJewelsInStones("z", "ZZ"))
-
-unittest.main(exit=False)
-
+    def test_smoke(self):
+        self.assertEqual(3, self.numJewelsInStones("aA", "aAAbbbb"))
+        self.assertEqual(0, self.numJewelsInStones("z", "ZZ"))

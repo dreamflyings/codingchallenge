@@ -66,7 +66,7 @@ class TicTacToeTest(unittest.TestCase):
         num_O = len(list(filter(lambda x: x == "O", board_list)))
 
         tic_tac_toes = [
-            board[0], # vertical
+            board[0],  # vertical
             board[1],
             board[2],
             board[0][0] + board[1][0] + board[2][0],  # horizontal

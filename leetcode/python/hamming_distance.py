@@ -15,27 +15,24 @@ x  y x    y    h | x ^ y
 import unittest
 
 
-class Solution(unittest.TestCase):
-  def hammingDistance(self, x, y):
-    """
-    :type x: int
-    :type y: int
-    :rtype: int
-    """
-    xor = x ^ y
+class HammingDistanceTest(unittest.TestCase):
+    def hammingDistance(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        xor = x ^ y
 
-    bits = 0
-    while xor > 0:
-      if xor & 0x1:
-        bits += 1
-      xor >>= 1
+        bits = 0
+        while xor > 0:
+            if xor & 0x1:
+                bits += 1
+            xor >>= 1
 
-    return bits
+        return bits
 
-  def test_smoke(self):
-    self.assertEqual(2, self.hammingDistance(1, 4))
-    self.assertEqual(1, self.hammingDistance(3, 2))
-    self.assertEqual(0, self.hammingDistance(0, 0))
-
-unittest.main(exit=False)
-
+    def test_smoke(self):
+        self.assertEqual(2, self.hammingDistance(1, 4))
+        self.assertEqual(1, self.hammingDistance(3, 2))
+        self.assertEqual(0, self.hammingDistance(0, 0))

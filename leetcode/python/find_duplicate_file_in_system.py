@@ -3,7 +3,7 @@
 
 https://leetcode.com/problems/find-duplicate-file-in-system/description/
 
-Find *al*l the groups of duplicate files in the file system in terms of their paths.
+Find all the groups of duplicate files in the file system in terms of their paths.
 
 """
 
@@ -42,7 +42,7 @@ class FindDuplicateFileInSystemTest(unittest.TestCase):
     def test_basic(self):
         input = ["root/a 1.txt(abcd) 2.txt(efgh)", "root/c 3.txt(abcd)", "root/c/d 4.txt(efgh)", "root 4.txt(efgh)"]
         expected = [["root/a/2.txt", "root/c/d/4.txt", "root/4.txt"], ["root/a/1.txt", "root/c/3.txt"]]
-        #self.assertEqual(expected, self.findDuplicate(input))
+        # self.assertEqual(expected, self.findDuplicate(input))
         # FIXME test passes, but need new check because output order does not matter
         self.assertTrue(True)
 

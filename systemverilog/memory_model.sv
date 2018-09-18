@@ -2,7 +2,7 @@ package tb_pkg;
   typedef bit [31:0] addr_t;
   typedef bit [31:0] data_t;
 
-  class MemoryModel;
+  class memory_model;
     bit [7:0] sparse_mem[bit [7:0]];
 
     function bit [7:0] read_byte(addr_t addr);
@@ -40,13 +40,13 @@ import tb_pkg::*;
 
 module tb_top;
   initial begin
-    MemoryModel mem_model = new;
+    memory_model mem = new;
     addr_t addr = 32'h0000_0080;
     data_t data = $urandom;
-    mem_model.write(addr, data);
-    assert(mem_model.read(addr) == data) else $error("mismatch detected");
-    mem_model.move(addr, addr + 8);
-    assert(mem_model.read(addr + 8) == data) else $error("mismatch detected");
+    mem.write(addr, data);
+    assert(mem.read(addr) == data) else $error("mismatch detected");
+    mem.move(addr, addr + 8);
+    assert(mem.read(addr + 8) == data) else $error("mismatch detected");
   end
 
 endmodule

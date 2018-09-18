@@ -19,7 +19,6 @@
     b = a; // changing b does not retrigger the always_comb during the timestep
     end
     ```
-
   - `always_ff`: Used to model sequential logic.  There can be only a single
     event control (i.e. `@(posedge clock)`) and no blocking controls.  Tools
     can implement lint behavior.

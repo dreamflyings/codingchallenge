@@ -26,6 +26,25 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 Backtracking with caching.  Not fast enough to pass worst case.
 
+Obviously, this is a dynamic programming problem, for which I have zero
+experience with.
+
+The solution mentions a greedy solution where we track the left-most GOOD
+position as a separate variable.
+
+Iterate right to left, tracking left-most good pointer.
+
+ [9, 4, 2, 1, 0, 2, 0]
+
+i left-most result 
+6  -        good
+5  6 2+5    good
+4  5        bad (4+0<5)
+3  5        bad
+2  5        bad
+1  5 1+5>=5 good
+0  1 1+9>=1 good 
+
 """
 
 import unittest
@@ -51,11 +70,20 @@ class JumpGameTest(unittest.TestCase):
         return reachable
 
     def canJump(self, nums):
-        cache = {}
-        if len(nums) == 1: return True
-        if len(nums) > 1 and nums[0] == 0: return False
+        #cache = {}
+        #if len(nums) == 1: return True
+        #if len(nums) > 1 and nums[0] == 0: return False
+        # 
+        #return self.canJumpFrom(nums, 0, cache)
+      
+        num_nums = len(nums)
 
-        return self.canJumpFrom(nums, 0, cache)
+        left_most = num_nums-1
+        for i in reversed(range(num_nums-1)):
+            if nums[i] + 1 >= left_most:
+                left_most = i
+
+        print(left_most)
 
     # def test_timeout(self):
     #     self.assertFalse(self.canJump([2,0,6,9,8,4,5,0,8,9,1,2,9,6,8,8,0,6,3,1,2,2,1,2,6,5,3,1,2,2,6,4,2,4,3,0,0,0,3,8,2,4,0,1,2,0,1,4,6,5,8,0,7,9,3,4,6,6,5,8,9,3,4,3,7,0,4,9,0,9,8,4,3,0,7,7,1,9,1,9,4,9,0,1,9,5,7,7,1,5,8,2,8,2,6,8,2,2,7,5,1,7,9,6]))

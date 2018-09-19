@@ -64,7 +64,6 @@ module tb_top;
   end
 
   // Clock and reset generation
-
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars;

@@ -93,17 +93,17 @@ class JumpGameTest(unittest.TestCase):
         return reachable
 
     def canJump(self, nums):
-        #cache = {}
-        #if len(nums) == 1: return True
-        #if len(nums) > 1 and nums[0] == 0: return False
+        # cache = {}
+        # if len(nums) == 1: return True
+        # if len(nums) > 1 and nums[0] == 0: return False
         # 
-        #return self.canJumpFrom(nums, 0, cache)
-      
+        # return self.canJumpFrom(nums, 0, cache)
+
         num_nums = len(nums)
-        left_most = num_nums-1
+        left_most = num_nums - 1
         good = True
 
-        for i in reversed(range(num_nums-1)):
+        for i in reversed(range(num_nums - 1)):
             if nums[i] + i >= left_most:
                 left_most = i
                 good = True
@@ -138,4 +138,3 @@ class JumpGameTest(unittest.TestCase):
 
     def test_basic_zero_at_tail(self):
         self.assertFalse(self.canJump([1, 0, 1, 0]))
-

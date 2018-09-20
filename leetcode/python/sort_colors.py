@@ -108,4 +108,3 @@ class SortColorsTest(unittest.TestCase):
 
     def test_corner_2(self):
         self.assertEqual([1, 1, 2], self.sort_colors([1, 2, 1]))
-

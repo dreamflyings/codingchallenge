@@ -16,8 +16,7 @@ Explanation: 342 + 465 = 807.
 
 ### Notes ###
 
-Many corner cases here work them one at a time.
-
+Many corner cases here work them one at a time.  Not too difficult.
 
 """
 
@@ -35,31 +34,23 @@ class AddTwoNumbersTest(unittest.TestCase):
         n1 = l1
         n2 = l2
 
-        #last = None
         first = None
         node = None
 
         carry = 0
+
         while n1 is not None or n2 is not None or carry != 0:
-            print("A")
             v1 = n1.val if n1 is not None else 0
             v2 = n2.val if n2 is not None else 0
 
             s = v1 + v2 + carry
-            print(v1, v2, carry, s)
             if s > 9:
                 carry = 1
                 s = s - 10
             else:
                 carry = 0
 
-            print(carry, s)
-            print()
-
             n = ListNode(s)
-            # if last is not None:
-            #     n.next = last
-            # last = n
 
             if first is None:
                 first = n
@@ -68,13 +59,9 @@ class AddTwoNumbersTest(unittest.TestCase):
                 node.next = n
                 node = n
 
-            print("Z", first.val, node.val, n1, n2)
-
-
             n1 = n1.next if n1 is not None else n1
             n2 = n2.next if n2 is not None else n2
 
-        #return last
         return first
 
     def num_to_linked_list(self, x):
@@ -102,7 +89,6 @@ class AddTwoNumbersTest(unittest.TestCase):
         actual = self.print_linked_list(result)
         self.assertEqual(expected, actual)
 
-
     def test_example_2(self):
         l1 = self.num_to_linked_list(5)
         l2 = self.num_to_linked_list(5)
@@ -121,9 +107,8 @@ class AddTwoNumbersTest(unittest.TestCase):
         self.assertEqual(expected, actual)
 
     def test_example_4(self):
-        print("DEBUG")
-        #81 + 0 = 81
-        l1 = self.num_to_linked_list(18) #??
+        # 81 + 0 = 81
+        l1 = self.num_to_linked_list(18)
         l2 = self.num_to_linked_list(0)
 
         result = self.add_two_numbers(l1, l2)

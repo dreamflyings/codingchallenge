@@ -1,27 +1,3 @@
-/*
-
-Valid combinations
-0
-1
-[2-9]11
-1 areacode 453 5794
-011-countrycode-
-
-
-areacode
-[2-9]xx
-
-
-
-
-
-
-
-
-
-*/
-
-
 class telephone_number;
   rand int num_digits; // parent constraint
 

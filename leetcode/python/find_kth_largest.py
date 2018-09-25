@@ -29,10 +29,11 @@ sorted is O(n*logn), not the greatest solution :(
 
 use heapq instead?
 
-heap is a special case of a balanced binary tree
+Heap is a special case of a balanced binary tree.  It is mainly used to represent a priority queue.
 
-the min-heap property: the value of each node is greater than or equal to the
-value of its parent, with the minimum-value element at the root.
+A pop returns the smallest element of the array (min heap).
+
+When elements are pushed or popped, the heap structure is maintained.
 
 its left child is located at 2*k index 
 its right child is located at 2*k+1. index 
@@ -44,16 +45,17 @@ import unittest
 
 import heapq
 
+
 class FindKthLargestTest(unittest.TestCase):
     def find_kth_largest(self, nums, k):
-        #num_nums = len(nums)
-        #return sorted(nums)[num_nums-k]
+        # num_nums = len(nums)
+        # return sorted(nums)[num_nums-k]
         heapq.heapify(nums)
         return heapq.nlargest(k, nums)[-1]
 
     def test_example_1(self):
-        self.assertEqual(5, self.find_kth_largest([3,2,1,5,6,4], 2)) # 1,2,3,4, 5,6
+        self.assertEqual(5, self.find_kth_largest([3, 2, 1, 5, 6, 4], 2))  # 1,2,3,4, 5,6
 
     def test_example_2(self):
-        self.assertEqual(4, self.find_kth_largest([3,2,3,1,2,4,5,5,6], 4)) # 1,2,2,3,3, 4,5,5,6
+        self.assertEqual(4, self.find_kth_largest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4))  # 1,2,2,3,3, 4,5,5,6
         # heapify -> [1, 2, 3, 2, 3, 4, 5, 5, 6]

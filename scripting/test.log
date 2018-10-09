@@ -1,0 +1,19 @@
+# this is a comment, note timestamps are out of order
+[@7] addr='hF0001234 data='hF000abcd tag='habc
+[@2] addr='h10001234 data='h1000abcd tag='habc
+[@3] addr='h20001234 data='h2000abcd tag='h123
+   # this is another comment
+[@5] addr='h40001234 data='h4000abcd tag='h123
+[@1] addr='h00001234 data='h0000abcd tag='h123
+[@6] addr='h50001234 data='h5000abcd tag='habc
+[@4] addr='h30001234 data='h3000abcd tag='habc
+#tag=0xabc
+#[@2] addr=0x10001234 data=0x1000abcd
+#[@4] addr=0x30001234 data=0x3000abcd
+#[@6] addr=0x50001234 data=0x5000abcd
+#[@7] addr=0xf0001234 data=0xf000abcd
+#tag=0x123
+#[@1] addr=0x1234 data=0xabcd
+#[@3] addr=0x20001234 data=0x2000abcd
+#[@5] addr=0x40001234 data=0x4000abcd
+

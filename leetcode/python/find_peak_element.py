@@ -13,15 +13,15 @@ class Solution:
             return 0 if nums[0] > nums[1] else 1
 
         left = 0
-        right = num_nums-1
+        right = num_nums - 1
 
         while right > left:
-            mid = left + int((right-left) / 2)
+            mid = left + int((right - left) / 2)
 
-            left_of_mid_val = nums[mid-1] if (mid-1) >= 0 else nums[0]
+            left_of_mid_val = nums[mid - 1] if (mid - 1) >= 0 else nums[0]
             mid_val = nums[mid]
-            right_of_mid_val = nums[mid+1] if (mid+1) < num_nums else nums[num_nums-1]
-
+            right_of_mid_val = nums[mid + 1] if (
+                mid + 1) < num_nums else nums[num_nums - 1]
 
             if (right - left) == 1:
                 if right_of_mid_val >= left_of_mid_val:
@@ -38,4 +38,3 @@ class Solution:
                 right = mid
 
         return None
-

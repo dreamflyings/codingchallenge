@@ -41,6 +41,7 @@ Words only consist of letters, never apostrophes or other punctuation symbols.
 
 """
 
+
 class Solution:
     def mostCommonWord(self, paragraph, banned):
         """
@@ -78,4 +79,3 @@ class Solution:
                             max_word = word
 
         return max_word
-

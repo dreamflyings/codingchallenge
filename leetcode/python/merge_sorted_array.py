@@ -17,7 +17,6 @@ nums2 = [2,5,6],       n = 3
 Output: [1,2,2,3,5,6]
 
 """
-
 """
 
 k i j nums1i nums2j nums[k] i' j'
@@ -35,6 +34,7 @@ k i j n1i n2j nk
 0 0 0 0   1   1
 """
 
+
 class Solution:
     def merge(self, nums1, m, nums2, n):
         """
@@ -46,9 +46,9 @@ class Solution:
         """
         i = m - 1
         j = n - 1
-        k = len(nums1)-1
+        k = len(nums1) - 1
 
-        while i >=0 or j >= 0:
+        while i >= 0 or j >= 0:
             if i == -1 and j != -1:
                 nums1[k] = nums2[j]
                 j -= 1
@@ -69,4 +69,3 @@ class Solution:
                     nums1[k] = nums2j
                     j -= 1
                     k -= 1
-

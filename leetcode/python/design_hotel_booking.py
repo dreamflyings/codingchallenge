@@ -52,16 +52,21 @@ class Room(object):
         self.booked = True
 
     def checkin(self, customer):
-        if not self.booked: raise Exception("Cannot check in to an unbooked room")
-        if self.occupied: raise Exception("Cannot check in to an occupied room")
-        if customer != self.customer: raise Exception("Wrong customer attempting to check in")
+        if not self.booked:
+            raise Exception("Cannot check in to an unbooked room")
+        if self.occupied:
+            raise Exception("Cannot check in to an occupied room")
+        if customer != self.customer:
+            raise Exception("Wrong customer attempting to check in")
 
         self.occupied = True
         self.customer = customer
 
     def checkout(self, customer):
-        if not self.occupied: raise Exception("Cannot check out to an unoccupied room")
-        if customer != self.customer: raise Exception("Wrong customer attempting to check out")
+        if not self.occupied:
+            raise Exception("Cannot check out to an unoccupied room")
+        if customer != self.customer:
+            raise Exception("Wrong customer attempting to check out")
 
         self.occupied = False
         self.customer = None

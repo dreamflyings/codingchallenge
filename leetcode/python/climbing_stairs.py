@@ -1,7 +1,6 @@
 # https://leetcode.com/problems/climbing-stairs/description/
 class Solution:
-
-    def climbStairs(self, n, cache = {}):
+    def climbStairs(self, n, cache={}):
         """
         :type n: int
         :rtype: int
@@ -17,9 +16,9 @@ class Solution:
         elif n == 2:
             ways_to_climb = 2
         else:
-            ways_to_climb = self.climbStairs(n-1, cache) + self.climbStairs(n-2, cache)
+            ways_to_climb = self.climbStairs(n - 1, cache) + self.climbStairs(
+                n - 2, cache)
 
         if n not in cache: cache[n] = ways_to_climb
 
         return ways_to_climb
-

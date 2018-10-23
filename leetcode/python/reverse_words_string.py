@@ -33,5 +33,6 @@ class ReverseWordsTest(unittest.TestCase):
     def test_basic(self):
         self.assertEqual("", self.reverseWords(" "))
         self.assertEqual("", self.reverseWords(""))
-        self.assertEqual("blue is sky the", self.reverseWords("the sky is blue"))
+        self.assertEqual("blue is sky the",
+                         self.reverseWords("the sky is blue"))
         self.assertEqual("b a", self.reverseWords("   a   b "))

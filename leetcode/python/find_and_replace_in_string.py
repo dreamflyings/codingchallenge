@@ -2,6 +2,7 @@
 https://leetcode.com/problems/find-and-replace-in-string/description/
 """
 
+
 class Solution:
     def findReplaceString(self, S, indexes, sources, targets):
         """
@@ -13,7 +14,7 @@ class Solution:
         """
         d = {}
         for index, source, target in zip(indexes, sources, targets):
-            replace = S[index:index+len(source)] == source
+            replace = S[index:index + len(source)] == source
             if replace:
                 d[index] = source, target
 
@@ -29,4 +30,3 @@ class Solution:
                 i += 1
 
         return "".join(s)
-

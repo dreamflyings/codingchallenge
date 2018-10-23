@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/implement-strstr/
 
+
 class Solution:
     def strStr(self, haystack, needle):
         """
@@ -23,8 +24,8 @@ class Solution:
             h_val = haystack[h]
             n_val = needle[n]
 
-            if h_val == n_val and n == len_n-1:
-                return h-len_n+1
+            if h_val == n_val and n == len_n - 1:
+                return h - len_n + 1
             elif h_val == n_val:
                 if first == None:
                     first = h
@@ -38,4 +39,3 @@ class Solution:
                 h += 1
 
         return -1
-

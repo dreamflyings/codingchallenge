@@ -54,7 +54,10 @@ class BinaryInorderTreeTraversalTest(unittest.TestCase):
         if levelOrderTree == []:
             return None
 
-        nodes = [None if value is None else TreeNode(value) for value in levelOrderTree]
+        nodes = [
+            None if value is None else TreeNode(value)
+            for value in levelOrderTree
+        ]
 
         kids = nodes[::-1]
 
@@ -102,16 +105,8 @@ class BinaryInorderTreeTraversalTest(unittest.TestCase):
         # return left + this + right
 
     def test_basic(self):
-        inputs = [
-            [],
-            [1, None, 2, 3],
-            [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-        ]
-        expected = [
-            [],
-            [1, 3, 2],
-            [7, 3, 8, 1, 9, 4, 0, 5, 2, 6]
-        ]
+        inputs = [[], [1, None, 2, 3], [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]]
+        expected = [[], [1, 3, 2], [7, 3, 8, 1, 9, 4, 0, 5, 2, 6]]
 
         self.assertEqual(len(inputs), len(expected))
 

@@ -41,6 +41,7 @@ sm[g] == d
 tm[d] == g
 """
 
+
 class Solution:
     def isIsomorphic(self, s, t):
         """
@@ -51,7 +52,7 @@ class Solution:
         sm = {}
         tm = {}
 
-        for ss,tt in zip(s, t):
+        for ss, tt in zip(s, t):
             #print(ss, sm, tt, tm)
             if ss not in sm and tt not in tm:
                 sm[ss] = tt
@@ -63,4 +64,3 @@ class Solution:
                 return False
 
         return True
-

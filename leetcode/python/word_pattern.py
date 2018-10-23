@@ -35,6 +35,7 @@ lowercase letters separated by a single space.
 
 """
 
+
 class Solution:
     def wordPattern(self, pattern, str):
         """
@@ -52,7 +53,7 @@ class Solution:
         if len(sl) != len(pl):
             return False
 
-        for s,p in zip(sl, pl):
+        for s, p in zip(sl, pl):
             if s not in s_to_p and p not in p_to_s:
                 s_to_p[s] = p
                 p_to_s[p] = s
@@ -63,4 +64,3 @@ class Solution:
                 return False
 
         return True
-

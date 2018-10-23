@@ -20,6 +20,7 @@ Input: 218
 Output: false
 """
 
+
 class Solution:
     def isPowerOfTwo(self, n):
         """
@@ -29,4 +30,3 @@ class Solution:
         import math
         if n <= 0: return False
         return math.log2(n).is_integer()
-

@@ -34,14 +34,17 @@ l e o t c e d e
 0 1 5 3 4 2 6 7
 
 """
+
+
 class Solution:
     def reverseVowels(self, s):
         """
         :type s: str
         :rtype: str
         """
+
         def isVowel(c):
-            return c in set(["a","e","i","o","u"])
+            return c in set(["a", "e", "i", "o", "u"])
 
         vowels = []
 
@@ -53,11 +56,11 @@ class Solution:
         num_vowels = len(vowels)
         print(vowels)
 
-        l = list(s) # strings are immutable
+        l = list(s)  # strings are immutable
 
-        for vi in range(int(num_vowels/2)):
+        for vi in range(int(num_vowels / 2)):
             li = vowels[vi]
-            ri = vowels[num_vowels-vi-1]
+            ri = vowels[num_vowels - vi - 1]
             print(li, ri)
 
             tmp = l[li]
@@ -65,4 +68,3 @@ class Solution:
             l[ri] = tmp
 
         return "".join(l)
-

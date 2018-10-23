@@ -14,8 +14,11 @@ class BuddyStringsTest(unittest.TestCase):
         aa = [A[i] for i in range(len(A))]
         bb = [B[i] for i in range(len(B))]
 
-        swap_indices = list(map(lambda x: x[1], filter(lambda x: x[0] == True, map(lambda x: (x[0] != x[1], x[2]),
-                                                                                   zip(aa, bb, range(len(A)))))))
+        swap_indices = list(
+            map(lambda x: x[1],
+                filter(lambda x: x[0] == True,
+                       map(lambda x: (x[0] != x[1], x[2]),
+                           zip(aa, bb, range(len(A)))))))
 
         num_swaps = len(swap_indices)
 

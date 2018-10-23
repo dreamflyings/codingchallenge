@@ -7,6 +7,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def levelOrder(self, root):
         """

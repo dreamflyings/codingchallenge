@@ -30,6 +30,7 @@ Example:
 """
 import sys
 
+
 class MinStack:
     def __init__(self):
         """
@@ -48,7 +49,7 @@ class MinStack:
         n = len(self.min_stack)
         if n == 0:
             self.min_stack.append(x)
-        elif x <= self.min_stack[n-1]:
+        elif x <= self.min_stack[n - 1]:
             self.min_stack.append(x)
 
     def pop(self):
@@ -56,24 +57,23 @@ class MinStack:
         :rtype: void
         """
         size = len(self.stack)
-        pop = self.stack[size-1]
-        self.stack = self.stack[0:size-1]
+        pop = self.stack[size - 1]
+        self.stack = self.stack[0:size - 1]
 
         n = len(self.min_stack)
-        if pop == self.min_stack[n-1]:
-            self.min_stack = self.min_stack[0:n-1]
+        if pop == self.min_stack[n - 1]:
+            self.min_stack = self.min_stack[0:n - 1]
 
     def top(self):
         """
         :rtype: int
         """
         n = len(self.stack)
-        return self.stack[n-1]
+        return self.stack[n - 1]
 
     def getMin(self):
         """
         :rtype: int
         """
         n = len(self.min_stack)
-        return self.min_stack[n-1]
-
+        return self.min_stack[n - 1]

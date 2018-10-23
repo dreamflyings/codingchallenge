@@ -19,6 +19,7 @@
 # (1^1)^(2^2)^4
 # (0)^(0)^4 = 4
 
+
 class Solution:
     def singleNumber(self, nums):
         """
@@ -29,4 +30,3 @@ class Solution:
         for i in range(1, len(nums)):
             ans = ans ^ nums[i]
         return ans
-

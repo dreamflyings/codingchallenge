@@ -39,6 +39,7 @@ This was a very good question, not easy imho.
 
 """
 
+
 class Solution:
     def findAnagrams(self, s, p):
         """
@@ -55,7 +56,6 @@ class Solution:
             pcounts[pchar] = pcounts.get(pchar, 0) + 1
 
         if plen > slen: return []
-
         """
         pcounts = {a:1, b:1, c:1}
         cbaebabacd
@@ -77,20 +77,19 @@ class Solution:
         i = 0
         j = plen
 
-        while j <= slen: # <= because range is non inclusive
+        while j <= slen:  # <= because range is non inclusive
             #print(i, j, s[i:j], slen, pcounts, scounts)
             if pcounts == scounts:
                 indices.append(i)
 
-            scounts[s[i]] -= 1 # remove left
+            scounts[s[i]] -= 1  # remove left
             if scounts[s[i]] == 0:
                 del scounts[s[i]]
 
             if j < slen:
-                scounts[s[j]] = scounts.get(s[j], 0) + 1 # add right
+                scounts[s[j]] = scounts.get(s[j], 0) + 1  # add right
 
             i += 1
             j += 1
 
         return indices
-

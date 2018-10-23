@@ -1,5 +1,6 @@
 # Problem: https://leetcode.com/problems/valid-anagram/
 
+
 class Solution:
     def isAnagram(self, s, t):
         """
@@ -18,4 +19,3 @@ class Solution:
             else: t_counts[t_ch] += 1
 
         return True if s_counts == t_counts else False
-

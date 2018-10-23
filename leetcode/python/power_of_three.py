@@ -25,7 +25,6 @@ import unittest
 
 
 class PowerOfThreeTest(unittest.TestCase):
-
     def is_power_of_three(self, n):
         import math
         if n < 1 or n is None: return False
@@ -34,7 +33,6 @@ class PowerOfThreeTest(unittest.TestCase):
         f = int(math.ceil(x / y))
 
         return math.pow(3, f) == n
-
 
     def test_example_1(self):
         self.assertTrue(self.is_power_of_three(27))

@@ -2,6 +2,7 @@
 
 from collections import OrderedDict
 
+
 class Solution:
     def firstUniqChar(self, s):
         """
@@ -17,12 +18,11 @@ class Solution:
             if not c in d:
                 d[c] = (0, pos)
             else:
-                d[c] = (d[c][0]+1, pos)
+                d[c] = (d[c][0] + 1, pos)
             pos += 1
 
-        for k,v in d.items():
+        for k, v in d.items():
             if d[k][0] == 0:
                 return d[k][1]
 
         return -1
-

@@ -101,7 +101,8 @@ class SortColorsTest(unittest.TestCase):
         return nums
 
     def test_basic(self):
-        self.assertEqual([0, 0, 1, 1, 2, 2], self.sort_colors([2, 0, 2, 1, 1, 0]))
+        self.assertEqual([0, 0, 1, 1, 2, 2],
+                         self.sort_colors([2, 0, 2, 1, 1, 0]))
 
     def test_corner_2(self):
         self.assertEqual([0, 1, 2], self.sort_colors([1, 2, 0]))

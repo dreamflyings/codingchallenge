@@ -1,5 +1,6 @@
 # Problem: https://leetcode.com/problems/plus-one/description/
 
+
 class Solution:
     def plusOne(self, digits):
         """
@@ -28,4 +29,3 @@ class Solution:
             digits = digits[1:]
 
         return digits
-

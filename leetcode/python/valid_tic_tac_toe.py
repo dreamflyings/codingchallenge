@@ -54,7 +54,6 @@ import unittest
 
 
 class TicTacToeTest(unittest.TestCase):
-
     def validTicTacToe(self, board):
         """
         :type board: List[str]

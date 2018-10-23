@@ -49,9 +49,5 @@ class GroupAnagramsTest(unittest.TestCase):
 
     def test_example_1(self):
         input = ["eat", "tea", "tan", "ate", "nat", "bat"]
-        expected = [
-            ["ate", "eat", "tea"],
-            ["nat", "tan"],
-            ["bat"]
-        ]
+        expected = [["ate", "eat", "tea"], ["nat", "tan"], ["bat"]]
         self.assertEqual(expected, self.group_anagrams(input))

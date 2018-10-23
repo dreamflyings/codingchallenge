@@ -4,4 +4,3 @@ class Solution:
         set2 = set(nums2)
         ans = list(set1.intersection(set2))
         return ans
-

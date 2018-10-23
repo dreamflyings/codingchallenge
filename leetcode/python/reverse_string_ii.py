@@ -30,6 +30,7 @@ f 2 2:4
 t 4 4:6
 """
 
+
 class Solution:
     def reverseStr(self, s, k):
         """
@@ -43,12 +44,11 @@ class Solution:
         i = 0
 
         while i < len(s):
-            tmp = s[i*k:(i+1)*k]
-            if reverse
+            tmp = s[i * k:(i + 1) * k]
+            if reverse:
                 tmp = tmp[::-1]
             l.append(tmp)
             reverse = not reverse
             i += 1
 
         return "".join(l)
-

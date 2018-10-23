@@ -25,7 +25,8 @@ import unittest
 class QueueReconstructionByHeightTest(unittest.TestCase):
     def reconstructQueue(self, people):
         # tall to short with increasing k value
-        people_by_height = sorted(people, key=lambda x: (-x[0], x[1]))  # wow, you can return tuple
+        people_by_height = sorted(
+            people, key=lambda x: (-x[0], x[1]))  # wow, you can return tuple
         # print("people_by_height")
         # print(people_by_height)
 

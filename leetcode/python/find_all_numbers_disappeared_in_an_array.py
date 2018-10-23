@@ -19,6 +19,7 @@ Output:
 
 """
 
+
 class Solution:
     def findDisappearedNumbers(self, nums):
         """
@@ -26,7 +27,6 @@ class Solution:
         :rtype: List[int]
         """
         a = set(nums)
-        b = set(range(1,len(nums)+1))
+        b = set(range(1, len(nums) + 1))
         c = b - a
         return list(c)
-

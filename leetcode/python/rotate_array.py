@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/rotate-array/description/
 
+
 class Solution:
     def rotate(self, nums, k):
         """
@@ -20,10 +21,9 @@ class Solution:
 #            nums[0] = tmp
 
         k = k % num_nums
-        nk = num_nums - k # 7 - 3 = 4
+        nk = num_nums - k  # 7 - 3 = 4
         #print(nums[nk:]) # [4:6] -> [5, 6, 7]
         #print(nums[:nk]) # [0:4-1] -> [1, 2, 3, 4]
 
         #nums = nums[nk:] + nums[:nk] # nope, not inplace
         nums[:] = nums[nk:] + nums[:nk]
-

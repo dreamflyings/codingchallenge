@@ -35,7 +35,6 @@ import unittest
 
 
 class DailyTemperaturesTest(unittest.TestCase):
-
     def dailyTemperatures(self, temps):
         stack = collections.deque()
         days_until_warm = collections.deque()

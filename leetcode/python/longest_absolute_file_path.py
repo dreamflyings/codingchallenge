@@ -85,4 +85,3 @@ class Solution:
                         path.append(tok)
 
         return longest_path
-

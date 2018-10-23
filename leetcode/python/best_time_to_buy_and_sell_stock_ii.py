@@ -40,4 +40,3 @@ class Solution:
                 profit = 0
 
             return max_profit
-

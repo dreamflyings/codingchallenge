@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/fizz-buzz/description/
 
+
 class Solution:
     def fizzBuzz(self, n):
         """
@@ -18,5 +19,4 @@ class Solution:
                 retval = str(x)
             return retval
 
-        return [f(i) for i in range(1,n+1)]
-
+        return [f(i) for i in range(1, n + 1)]

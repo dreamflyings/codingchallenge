@@ -32,6 +32,7 @@ A = [12, 28, 46, 32, 50] -> 1, 4 [..]
 B = [50, 12, 32, 46, 28] -> 0, 1, 2, 3, 4
 """
 
+
 class Solution:
     def anagramMappings(self, A, B):
         """
@@ -49,4 +50,3 @@ class Solution:
             ans.append(mapping[a])
 
         return ans
-

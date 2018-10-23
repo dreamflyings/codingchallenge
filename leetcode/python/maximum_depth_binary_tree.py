@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
 
+
 class Solution:
     def maxDepth(self, root):
         """

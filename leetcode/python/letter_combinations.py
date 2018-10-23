@@ -33,10 +33,19 @@ class LetterCombinationsTest(unittest.TestCase):
     def letterCombinations(self, digits):
         if digits == "": return []
 
-        digit_to_letters = {2: ["a", "b", "c"], 3: ["d", "e", "f"], 4: ["g", "h", "i"], 5: ["j", "k", "l"],
-                            6: ["m", "n", "o"], 7: ["p", "q", "r", "s"], 8: ["t", "u", "v"], 9: ["w", "x", "y", "z"]}
+        digit_to_letters = {
+            2: ["a", "b", "c"],
+            3: ["d", "e", "f"],
+            4: ["g", "h", "i"],
+            5: ["j", "k", "l"],
+            6: ["m", "n", "o"],
+            7: ["p", "q", "r", "s"],
+            8: ["t", "u", "v"],
+            9: ["w", "x", "y", "z"]
+        }
 
-        letters = list(map(lambda x: digit_to_letters[int(x)], digits))  # [[a,b,c],[d,e,f]]
+        letters = list(map(lambda x: digit_to_letters[int(x)],
+                           digits))  # [[a,b,c],[d,e,f]]
 
         num_levels = len(letters)
 
@@ -56,8 +65,6 @@ class LetterCombinationsTest(unittest.TestCase):
 
         f(0, [])
 
-
-
         return list(map(lambda x: "".join(x), result))
 
     def test_basic(self):
@@ -71,6 +78,6 @@ class LetterCombinationsTest(unittest.TestCase):
         self.assertEqual(expected, self.letterCombinations(input))
 
     def test_bounds(self):
-       input = ""
-       expected = []
-       self.assertEqual(expected, self.letterCombinations(input))
+        input = ""
+        expected = []
+        self.assertEqual(expected, self.letterCombinations(input))

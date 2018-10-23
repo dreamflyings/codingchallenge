@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/contains-duplicate/description/
 
+
 class Solution:
     def containsDuplicate(self, nums):
         """
@@ -13,4 +14,3 @@ class Solution:
             else:
                 return True
         return False
-

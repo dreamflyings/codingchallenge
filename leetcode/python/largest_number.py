@@ -56,5 +56,7 @@ class LargestNumberTest(unittest.TestCase):
         self.assertEqual(self.largestNumber([0, 0]), "0")
         self.assertEqual(self.largestNumber([10, 2]), "210")
         self.assertEqual(self.largestNumber([9, 3, 30, 34, 5]), "9534330")
-        self.assertEqual(self.largestNumber([1440, 7548, 4240, 6616, 733, 4712, 883, 8, 9576]),
-                         "9576888375487336616471242401440")
+        self.assertEqual(
+            self.largestNumber(
+                [1440, 7548, 4240, 6616, 733, 4712, 883, 8, 9576]),
+            "9576888375487336616471242401440")

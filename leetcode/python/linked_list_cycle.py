@@ -6,9 +6,10 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution(object):
     def hasCycle(self, head):
-        if head is None or head.next is None: 
+        if head is None or head.next is None:
             return False
 
         tail = head
@@ -21,4 +22,3 @@ class Solution(object):
             head = head.next.next
 
         return False
-

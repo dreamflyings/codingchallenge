@@ -11,7 +11,6 @@ Note:
 You must do this in-place without making a copy of the array.
 Minimize the total number of operations.
 """
-
 """
 nums       = 0 1 0 3 12
 expected   = 1 3 12 0 0
@@ -51,6 +50,7 @@ i j
 2 1 nums[1] = nums[2] 1 0 0
 """
 
+
 class Solution:
     def moveZeroes(self, nums):
         """
@@ -73,6 +73,5 @@ class Solution:
             nums[j] = nums[i]
 
         #print(num_nums)
-        for i in range(num_nums-num_zeros, num_nums):
+        for i in range(num_nums - num_zeros, num_nums):
             nums[i] = 0
-

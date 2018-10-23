@@ -54,8 +54,11 @@ class FindKthLargestTest(unittest.TestCase):
         return heapq.nlargest(k, nums)[-1]
 
     def test_example_1(self):
-        self.assertEqual(5, self.find_kth_largest([3, 2, 1, 5, 6, 4], 2))  # 1,2,3,4, 5,6
+        self.assertEqual(5, self.find_kth_largest([3, 2, 1, 5, 6, 4],
+                                                  2))  # 1,2,3,4, 5,6
 
     def test_example_2(self):
-        self.assertEqual(4, self.find_kth_largest([3, 2, 3, 1, 2, 4, 5, 5, 6], 4))  # 1,2,2,3,3, 4,5,5,6
+        self.assertEqual(4,
+                         self.find_kth_largest([3, 2, 3, 1, 2, 4, 5, 5, 6],
+                                               4))  # 1,2,2,3,3, 4,5,5,6
         # heapify -> [1, 2, 3, 2, 3, 4, 5, 5, 6]

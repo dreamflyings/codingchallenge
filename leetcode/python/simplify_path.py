@@ -26,6 +26,7 @@ Corner Cases:
 
 """
 
+
 class Solution:
     def simplifyPath(self, path):
         """
@@ -46,4 +47,3 @@ class Solution:
                     stack.append(tok)
 
         return "/" + "/".join(stack)
-

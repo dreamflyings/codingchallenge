@@ -32,6 +32,7 @@ cas(5) 111221
     cas(1) # 1
 """
 
+
 class Solution:
     def countAndSay(self, n, say=""):
         if n == 1:
@@ -39,7 +40,7 @@ class Solution:
         elif n == 2:
             return "11"
         else:
-            m = self.countAndSay(n-1)
+            m = self.countAndSay(n - 1)
 
             len_m = len(m)
             count = 1
@@ -47,15 +48,15 @@ class Solution:
             say = ""
             for i in range(1, len_m):
                 curr = m[i]
-                prev = m[i-1]
-                last = i == len_m-1
+                prev = m[i - 1]
+                last = i == len_m - 1
 
                 if last:
                     if curr == prev:
                         count += 1
                         say += "{}{}".format(count, prev)
                     else:
-                        say += "{}{}1{}".format(count,prev, curr)
+                        say += "{}{}1{}".format(count, prev, curr)
                 else:
                     if curr == prev:
                         count += 1
@@ -64,4 +65,3 @@ class Solution:
                         count = 1
 
             return say
-

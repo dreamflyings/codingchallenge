@@ -36,6 +36,7 @@ unique_a = s
 unique_b = s z ejt
 """
 
+
 class Solution:
     def uncommonFromSentences(self, A, B):
         """
@@ -48,14 +49,12 @@ class Solution:
             if word not in all_words:
                 all_words.add(word)
 
-
         word_count_a = {}
         for word in A.split(" "):
             if word not in word_count_a:
                 word_count_a[word] = 1
             else:
                 word_count_a[word] += 1
-
 
         word_count_b = {}
         for word in B.split(" "):
@@ -87,4 +86,3 @@ class Solution:
                         ans.append(word)
 
         return ans
-

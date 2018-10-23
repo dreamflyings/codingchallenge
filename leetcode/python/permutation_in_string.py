@@ -29,6 +29,7 @@ The length of both given strings is in range [1, 10,000].
 
 # O(n^2), Time Limit Exceeded :(
 
+
 class Solution:
     def checkInclusion(self, s1, s2):
         """
@@ -47,7 +48,8 @@ class Solution:
             else:
                 s1map[char] += 1
 
-        s2list = ["" for _ in range(s1len-1)] + list(s2) + ["" for _ in range(s1len-1)]
+        s2list = ["" for _ in range(s1len - 1)] + list(
+            s2) + ["" for _ in range(s1len - 1)]
 
         #print(s1map)
         #print(s2list)
@@ -55,13 +57,12 @@ class Solution:
         for i in range(len(s2list)):
             #print(i, i+s1len, s2list[i:i+s1len])
             window = {}
-            for char in s2list[i:i+s1len]:
+            for char in s2list[i:i + s1len]:
                 if char in s1set:
-                  if char not in window:
-                      window[char] = 1
-                  else:
-                      window[char] += 1
-                  if window == s1map:
-                      return True
+                    if char not in window:
+                        window[char] = 1
+                    else:
+                        window[char] += 1
+                    if window == s1map:
+                        return True
         return False
-

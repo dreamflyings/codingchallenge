@@ -14,6 +14,7 @@ Output: 5
 
 import re
 
+
 class Solution:
     def countSegments(self, s):
         """
@@ -21,4 +22,3 @@ class Solution:
         :rtype: int
         """
         return len(list(filter(lambda x: x, re.split("\s+", s))))
-

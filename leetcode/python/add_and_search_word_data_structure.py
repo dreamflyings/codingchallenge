@@ -21,8 +21,8 @@ search("b..") -> true
 
 """
 
-class WordDictionary:
 
+class WordDictionary:
     def __init__(self):
         """
         Initialize your data structure here.
@@ -37,8 +37,8 @@ class WordDictionary:
         """
 
         l = len(word)
-        for i in range(2**l): # 0,1,2,3, etc.
-            bits = "{0:b}".format(i).zfill(l) # 000, 001, 010, 011, etc.
+        for i in range(2**l):  # 0,1,2,3, etc.
+            bits = "{0:b}".format(i).zfill(l)  # 000, 001, 010, 011, etc.
 
             wword = []
             for i in range(l):
@@ -57,8 +57,8 @@ class WordDictionary:
         """
         return word in self.set
 
+
 # Your WordDictionary object will be instantiated and called as such:
 # obj = WordDictionary()
 # obj.addWord(word)
 # param_2 = obj.search(word)
-

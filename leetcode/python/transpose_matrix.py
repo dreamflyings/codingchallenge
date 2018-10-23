@@ -55,6 +55,7 @@ row[1][0] = A[0][1] = 2
 
 """
 
+
 class Solution:
     def transpose(self, A):
         """
@@ -73,4 +74,3 @@ class Solution:
                 row[c] = A[c][r]
             T.append(row)
         return T
-

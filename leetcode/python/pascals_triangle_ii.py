@@ -26,6 +26,7 @@ gr(3)
 
 """
 
+
 class Solution:
     def get_row(self, row_index):
         """
@@ -37,16 +38,13 @@ class Solution:
         elif row_index == 1:
             return [1, 1]
         else:
-            prev = self.get_row(row_index-1)
+            prev = self.get_row(row_index - 1)
             num_cols = row_index + 1
             row = [None for _ in range(num_cols)]
             row[0] = prev[0]
             row[-1] = prev[-1]
 
-            for i in range(1, num_cols-1):
-                row[i] = prev[i-1] + prev[i]
+            for i in range(1, num_cols - 1):
+                row[i] = prev[i - 1] + prev[i]
 
             return row
-
-
-

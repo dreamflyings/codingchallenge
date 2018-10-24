@@ -84,4 +84,3 @@ class Solution:
             si += 1
 
         return rooms
-

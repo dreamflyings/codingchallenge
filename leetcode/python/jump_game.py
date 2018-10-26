@@ -96,7 +96,7 @@ class JumpGameTest(unittest.TestCase):
         # cache = {}
         # if len(nums) == 1: return True
         # if len(nums) > 1 and nums[0] == 0: return False
-        # 
+        #
         # return self.canJumpFrom(nums, 0, cache)
 
         num_nums = len(nums)

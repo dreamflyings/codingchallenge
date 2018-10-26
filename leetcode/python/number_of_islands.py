@@ -54,8 +54,8 @@ class NumberOfIslandsTest(unittest.TestCase):
         visited = [[0 for _ in range(num_cols)] for _ in range(num_rows)]
 
         def is_on_grid(row, col):
-            x = False if (row < 0 or row >= num_rows or col < 0 or
-                          col >= num_cols) else True
+            x = False if (row < 0 or row >= num_rows or col < 0
+                          or col >= num_cols) else True
             return x
 
         def is_water(row, col):

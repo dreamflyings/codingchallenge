@@ -78,6 +78,6 @@ class RemoveDuplicatesSortedArrayTest(unittest.TestCase):
             self.removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4]), 5)
         self.assertEqual(self.removeDuplicates([0, 0, 4]), 2)
         self.assertEqual(self.removeDuplicates([0, 0, 4, 5, 6, 7]), 5)
-        self.assertEqual(
-            5, self.removeDuplicates(
-                [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]))  # [0, 1, 2, 3, 4]
+        self.assertEqual(5,
+                         self.removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3,
+                                                4]))  # [0, 1, 2, 3, 4]

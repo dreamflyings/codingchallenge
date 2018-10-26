@@ -72,7 +72,7 @@ class Solution:
                     tok_has_ext = len(name_ext) > 1
 
                     if tok_has_ext:
-                        # file                        
+                        # file
                         abspath = "/".join(path) + "/" + tok
                         abspath = abspath.lstrip("/")
                         len_path = len(abspath)

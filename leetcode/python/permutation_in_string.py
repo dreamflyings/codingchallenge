@@ -48,8 +48,8 @@ class Solution:
             else:
                 s1map[char] += 1
 
-        s2list = ["" for _ in range(s1len - 1)] + list(
-            s2) + ["" for _ in range(s1len - 1)]
+        s2list = ["" for _ in range(s1len - 1)
+                  ] + list(s2) + ["" for _ in range(s1len - 1)]
 
         #print(s1map)
         #print(s2list)

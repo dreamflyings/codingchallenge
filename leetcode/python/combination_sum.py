@@ -57,8 +57,8 @@ class CombinationSumTest(unittest.TestCase):
         candidates = sorted(candidates)
         for r in range(len(candidates) + 7):  # HACK
             for c in filter(lambda x: sum(x) == target,
-                            itertools.combinations_with_replacement(candidates,
-                                                                    r)):
+                            itertools.combinations_with_replacement(
+                                candidates, r)):
                 result.append(list(c))
 
         # result = [[7], [2, 2, 3]]
@@ -71,8 +71,8 @@ class CombinationSumTest(unittest.TestCase):
         expected = sorted([[2, 2, 2, 2], [2, 3, 3], [3, 5]])
         self.assertEqual(expected, self.combinationSum([2, 3, 5], 8))
 
-        expected = sorted(
-            [[2, 2, 2, 2, 2, 2, 2, 2, 2], [2, 2, 2, 2, 2, 2, 3, 3],
-             [2, 2, 2, 2, 3, 7], [2, 2, 2, 3, 3, 3, 3], [2, 2, 7, 7],
-             [2, 3, 3, 3, 7], [3, 3, 3, 3, 3, 3]])
+        expected = sorted([[2, 2, 2, 2, 2, 2, 2, 2,
+                            2], [2, 2, 2, 2, 2, 2, 3,
+                                 3], [2, 2, 2, 2, 3, 7], [2, 2, 2, 3, 3, 3, 3],
+                           [2, 2, 7, 7], [2, 3, 3, 3, 7], [3, 3, 3, 3, 3, 3]])
         self.assertEqual(expected, self.combinationSum([7, 3, 2], 18))

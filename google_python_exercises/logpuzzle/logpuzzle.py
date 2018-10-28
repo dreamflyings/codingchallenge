@@ -25,7 +25,16 @@ def read_urls(filename):
   Screens out duplicate urls and returns the urls sorted into
   increasing order."""
   # +++your code here+++
-  
+  unique_urls = set()
+  urls = []
+  for line in open(filename):
+    for x in re.findall("GET\s(.*?)\sHTTP", line):
+      if "puzzle" in x:
+        if x not in unique_urls:
+          unique_urls.add(x)
+          urls.append("http://code.google.com"+x)
+
+  return list(sorted(urls))
 
 def download_images(img_urls, dest_dir):
   """Given the urls already in the correct order, downloads
@@ -36,7 +45,13 @@ def download_images(img_urls, dest_dir):
   Creates the directory if necessary.
   """
   # +++your code here+++
-  
+  if not os.path.isdir(dest_dir):
+    os.mkdir(dest_dir)
+
+  count = 0
+  for url in img_urls:
+    x = urllib.urlretrieve(url, "{}/img{}.jpg".format(dest_dir, count))
+    count += 1
 
 def main():
   args = sys.argv[1:]

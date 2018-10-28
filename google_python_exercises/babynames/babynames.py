@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
@@ -35,18 +35,24 @@ Suggested milestones for incremental development:
 
 
 def extract_names(filename):
-  """
-  Given a file name for baby.html, returns a list starting with the year string
-  followed by the name-rank strings in alphabetical order.
-  ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
-  """
-    # +++your code here+++
-    with open(filename) as file:
-        lines = file.read()
-        for match in re.finall(r"(?P<start><(\w+)>|(?P<end></(\w+)>"), lines, re.MULTILINE):
-            print(match)
+    """
+    Given a file name for baby.html, returns a list starting with the year string
+    followed by the name-rank strings in alphabetical order.
+    ['2006', 'Aaliyah 91', Aaron 57', 'Abagail 895', ' ...]
+    """
+    year = re.search(r"baby(\d+)\.html", filename).group(1)
+    name_rank = []
 
-    return
+    file = open(filename)
+    lines = file.read()
+    for x in re.findall(r"<tr align=\"right\">(.*?)$", lines, re.MULTILINE):
+        for y in re.findall(r"<td>(\d+)</td><td>(\w+)</td><td>(\w+)</td>", x):
+            name_rank.append("{} {}".format(y[2], y[0]))
+    file.close()
+
+    tmp = [year] + sorted(name_rank)
+
+    return tmp
 
 
 def main():
@@ -68,6 +74,17 @@ def main():
     # +++your code here+++
     # For each filename, get the names, then either print the text output
     # or write it to a summary file
+    start = 1 if not summary else 2
+    for filename in sys.argv[start:]:
+        first = True
+        for x in extract_names(filename):
+            if summary:
+                if first:
+                    file = open(filename + ".summary", "w")
+                    first = False
+                file.write(x + "\n")
+            else:
+                print(x)
 
 
 if __name__ == '__main__':

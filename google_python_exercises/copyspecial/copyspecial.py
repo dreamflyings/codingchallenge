@@ -13,9 +13,8 @@ import shutil
 import commands
 """Copy Special exercise
 
-* Takes one or more directories as argument
-* A special file is where the name contains the pattern __w__ somewhere, where w is one or more word characters
-
+* Takes one or more directories as argument * A special file is where the name
+  contains the pattern __w__ somewhere, where w is one or more word characters
 
 """
 
